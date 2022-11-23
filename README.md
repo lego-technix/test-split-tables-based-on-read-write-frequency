@@ -30,18 +30,18 @@ Voici les valeurs et résultats obtenus sur mon système.
 
 ### Temps
 
-La manière *monolithic* prend `69,469` s et la manière *split* prend `51,944` s.
+La manière *monolithic* prend `68,376` secondes et la manière *split* prend `50,986` secondes.
 
 ```shell
 time ./test-db-monolithic
-real    1m9,469s
+real    1m8,376s
 user    0m0,020s
 sys     0m0,009s
 ```
 
 ```shell
 time ./test-db-split
-real    0m51,944s
+real    0m50,986s
 user    0m0,022s
 sys     0m0,008s
 ```
@@ -54,7 +54,7 @@ La manière *monolithic* prend `507` MB et la manière *split* prend `546` MB.
 postgres=# select pg_size_pretty(pg_database_size('test_monolithic'));
  pg_size_pretty 
 ----------------
- 507 MB
+ 499 MB
 ```
 
 ```
@@ -68,7 +68,7 @@ test_monolithic=# select pg_size_pretty(pg_relation_size('users'::regclass));
 postgres=# select pg_size_pretty(pg_database_size('test_split'));
  pg_size_pretty 
 ----------------
- 546 MB
+ 562 MB
 ```
 
 ```
@@ -82,7 +82,7 @@ test_split=# select pg_size_pretty(pg_relation_size('users'::regclass));
 test_split=# select pg_size_pretty(pg_relation_size('user-logins'::regclass));
  pg_size_pretty 
 ----------------
- 130 MB
+ 146 MB
 ```
 
 

@@ -17,10 +17,15 @@ create table users (
   "isAnonymous" boolean default false,
   "emailConfirmedAt" timestamp with time zone,
   "hasSeenFocusedChallengeTooltip" boolean default false,
-  "lastLoggedAt" timestamp with time zone,
   "hasSeenOtherChallengesTooltip" boolean default false,
   "lastPixOrgaTermsOfServiceValidatedAt" timestamp with time zone,
   "lastPixCertifTermsOfServiceValidatedAt" timestamp with time zone,
+
+  "lastLoggedAt" timestamp with time zone,
+  "failureCount" int default 0,
+  "temporaryBlockedUntil" timestamp with time zone,
+  "blockedAt" timestamp with time zone,
+
   unique (email),
   unique (username)
 );
