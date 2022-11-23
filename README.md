@@ -48,7 +48,7 @@ sys     0m0,008s
 
 ### Tailles des différentes tables
 
-La manière *monolithic* prend `507 MB et la manière *split* prend `546` MB.
+La manière *monolithic* prend `507` MB et la manière *split* prend `546` MB.
 
 ```
 postgres=# select pg_size_pretty(pg_database_size('test_monolithic'));
