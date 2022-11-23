@@ -30,7 +30,7 @@ Voici les valeurs et résultats obtenus sur mon système.
 
 ### Temps
 
-La manière *monolithic* prend `1m9,469` s et la manière *split* prend `51,944` s.
+La manière *monolithic* prend `69,469` s et la manière *split* prend `51,944` s.
 
 ```shell
 time ./test-db-monolithic
