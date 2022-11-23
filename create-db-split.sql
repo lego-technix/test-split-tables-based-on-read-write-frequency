@@ -27,7 +27,12 @@ create table users (
 create index "users_email_lower" on "users"(LOWER("email"));
 
 create table "user-logins" (
-  "id" serial not null,
+  "id" serial primary key,
+  "createdAt" timestamp with time zone not null default ('now'::text)::timestamp with time zone,
+  "updatedAt" timestamp with time zone not null default ('now'::text)::timestamp with time zone,
   "userId" int not null references users,
   "lastLoggedAt" timestamp with time zone
 );
+
+create index on "user-logins" ("userId");
+

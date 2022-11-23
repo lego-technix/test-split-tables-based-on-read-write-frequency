@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Exit on error
+set -o errexit
+
+db_name=test_split
+
+psql --set ON_ERROR_STOP=true "postgresql://postgres@localhost/$db_name" -f test-db-split.sql

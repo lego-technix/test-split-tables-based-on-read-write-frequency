@@ -5,4 +5,4 @@ set -o errexit
 
 db_name=test_monolithic
 
-psql --set ON_ERROR_STOP=true "postgresql://postgres@localhost/$db_name" -f db-populate-users.sql
+psql --set ON_ERROR_STOP=true "postgresql://postgres@localhost/$db_name" -f populate-db-monolithic.sql
