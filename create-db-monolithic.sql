@@ -22,7 +22,7 @@ create table users (
   "lastPixCertifTermsOfServiceValidatedAt" timestamp with time zone,
 
   "lastLoggedAt" timestamp with time zone,
-  "failureCount" int default 0,
+  "failureCount" int not null default 0,
   "temporaryBlockedUntil" timestamp with time zone,
   "blockedAt" timestamp with time zone,
 

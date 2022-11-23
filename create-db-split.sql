@@ -33,7 +33,7 @@ create table "user-logins" (
   "updatedAt" timestamp with time zone not null default ('now'::text)::timestamp with time zone,
   "userId" int not null references users,
   "lastLoggedAt" timestamp with time zone,
-  "failureCount" int default 0,
+  "failureCount" int not null default 0,
   "temporaryBlockedUntil" timestamp with time zone,
   "blockedAt" timestamp with time zone
 );
