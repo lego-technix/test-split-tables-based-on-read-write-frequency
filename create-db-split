@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Exit on error
+set -o errexit
+
+./create-db -d test_split -f db-split.sql

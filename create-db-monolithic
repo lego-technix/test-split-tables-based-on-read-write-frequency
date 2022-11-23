@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Exit on error
+set -o errexit
+
+./create-db -d test_monolithic -f db-monolithic.sql
