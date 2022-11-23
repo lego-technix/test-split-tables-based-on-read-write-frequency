@@ -7,7 +7,7 @@ L'objectif est de comparer 2 manières de faire : *monolithic* vs *split*
 
 Sont créées 2 bases de données distinctes, l'une avec une table monolithique et l'autre avec deux tables séparées, chacune avec avec 1 million de lignes.
 
-Ensuite sont comparés avec `time` le temps que mettent 1 million de fois un `update` (sur `lastLoggedAt` et `updatedAt`) suivi d'un `select` pour chacune des bases de données. L'objectif est de savoir si la modification de lignes de users influe sur la récupération de lignes de users récupérées par le biais d'un index.
+Ensuite sont comparés avec `time` le temps que mettent 1 million de fois un `update` (sur `lastLoggedAt` et `updatedAt`) suivi d'un `select` pour chacune des bases de données. L'objectif est de savoir si la modification de lignes de `users` influe sur la récupération de lignes de `users` récupérées par le biais d'un index.
 
 
 ## Procédure
