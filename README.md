@@ -92,7 +92,7 @@ Avec la manière *split* il y a donc une diminution des temps d'accès notable.
 
 Avec la manière *split* il y a donc une augmentation de taille notable mais pas rédhibitoire.
 
-Choisir la manière *split* est donc avantageuse en terme de rapidité sans présenter d'inconvénient.
+Choisir la manière *split* est donc avantageuse en terme de rapidité sans présenter d'inconvénient bloquant.
 Et surtout elle permet de regrouper dans une table dédiée `user-logins` toutes les données relatives au login, ce qui a beaucoup de sens en terme d'architecture notamment pour faciliter la compréhension et le travail des développeurs.
 
 
